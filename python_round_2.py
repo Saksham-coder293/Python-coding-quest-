@@ -727,13 +727,753 @@ print()
 #program 50
 #wrie a python program to calculate factorial
 
-num = int(input("Enter the range : "))
+"""num = int(input("Enter the range : "))
 
 factorial = 1
 
 for i in range(1, num +1):
     factorial *= i 
 
-print(f"The factorial upto {num} is {factorial}")
+print(f"The factorial upto {num} is {factorial}") """
+
+#program 51
+#write a program to print the square the numbers
+
+"""for i in range(1,11):
+    print(f"{i:<7}  {i ** 2} ")"""
+
+#program 52
+#write a python program to print the sum of even or odd number separately.
+
+
+"""n = int(input("Enter the range : "))
+
+
+odd_sum = 0
+even_sum = 0
+for i in range(1, n+1):
+  if i%2 == 0:
+     even_sum += i
+  else:
+     odd_sum += i
+
+print(f"The sum of odd num are {odd_sum}")
+print(f"The sum of even num are {even_sum}")  """
+
+
+#program 53
+#write a python program to count digits in a number
+
+"""num = int(input("Enter a number : "))
+
+temp = num
+count = 0
+
+while temp > 0:
+    count += 1
+    temp //= 10
+
+print(f"The number of digits in input are {count}")  """
+
+
+#program 54
+#write a python program to calculate the sum of digits using while loop
+
+"""num = int(input("Enter the number :"))
+
+n = num
+sum = 0
+
+while n > 0:
+    sum += n%10     # % 10 gives the last digit 
+    n //= 10
+
+print(f"the sum of digits in given input are {sum}")   """
+
+
+#program 55
+#write a python program to calculate the sum of the series (harmonic sum)
+
+"""num = int(input("Enter the number : "))
+
+sum = 0
+
+for i in range(1, num + 1):
+    sum += 1/i
+
+print(f"The harmonic sum till n is {sum:.4f}")    """
+
+
+#program 56
+#write a python program to reverse a number 
+
+"""num = int(input("Enter the number : "))
+
+n = num
+rev = 0 
+
+while n > 0:
+    rev = rev * 10 + n % 10    #kind of left side operator
+    n //= 10
+
+
+print(f"The reversed number is {rev}")   """
+
+#program 57
+# write a python program to check whether a number is palindrome is not 
+
+
+"""num = int(input("Enter the number : "))
+
+
+n = num
+rev = 0
+
+while n > 0:
+    rev = rev * 10 + n% 10
+    n //= 10
+
+if rev == num:
+    print("Number is palindrome")
+else:
+    print("Number is not palindrome")  """
+
+#another way
+
+"""def is_palindrome(n):
+    return str(n) == str(n)[::-1]
+
+print(is_palindrome("Saksham")).  """
+
+
+#program 58
+#write a python program to print fibonacci series. 
+
+
+"""n = int(input("How many terms : "))
+
+a,b = 0,1    #first we will initialise a and b from 0 
+
+for _ in range(n):
+  print(a, end = " ")
+  a,b = b, a+b
+print()    """
+
+
+
+#program 59
+#write a program to check the prime number 
+
+
+"""num = int(input("Enter a number : "))
+
+is_prime = num > 1
+
+for i in range(2, int(num ** 0.5) + 1):
+    if num % i == 0:
+     is_prime = False
+     break
+
+if is_prime:
+   print(f"{num} is prime")
+else:
+   print(f"{num} is not prime")   """
+
+#program 60
+#write a program to check a number within a given range : 
+
+"""lower = int(input("Enter the lower range : "))
+higher = int(input("Enter the higher range : "))
+
+for num in range(max(lower, 2), higher + 1):
+    for i in range(2, int(num ** 0.5) +1 ):
+        if num % i == 0:
+         break
+
+    else:
+       print(num, end = " ")
+
+print()
+"""
+
+#program 61
+#write a program to check whether a number is armstrong is not 
+
+"""num = int(input("Enter the number : "))
+
+total = 0
+n = num
+digits = len(str(num))
+
+
+while n > 0:
+    total += (n%10) ** digits
+    n //= 10
+
+if total == num:
+    print("Given number is armstrong")
+else:
+    print("Given number is not armstrong") """
+
+#program 62
+#write a program to check whether a number is perfect number 
+
+"""num = int(input("ENTER THE NUMBER :"))
+
+total = 0
+n = num
+
+for i in range(1, num):
+    total += (n%i == 0)   #checks how many divisors exist 
+    
+
+
+if total == num:
+    print("Given number is a perfect number")
+else:
+    print("Given number is not perfect number")  """
+
+
+#Correct solution 
+
+"""num = int(input("Enter a number : "))
+
+total = 0
+
+for i in range(1, num):
+    if num % i == 0:
+        total += i
+
+
+if total == num:
+    print("Given number is a perfect number ")
+else:
+    print("Given number is not perfect number ") """
+
+
+#program 63
+#write a program to check whether a number is strong number or not 
+
+"""num = int(input("Enter a number : "))
+
+temp = num
+total = 0
+
+
+while temp > 0:
+    digit = temp % 10   #extracts the remainder of the value
+    fact = 1
+    for i in range(1, digit + 1):
+      fact * i
+    total += fact
+    temp //= 10   #Divide by 10 and store the value in temp  (removes the last value)
+
+if total == num:
+   print("Given number is not a strong number ")
+else:
+   print("Given number is a strong number")    """
+
+
+
+#program 64
+#write a python program to compute the greatest common divisor 
+
+"""a = int(input("Enter number a :"))
+b = int(input("Enter number b :"))
+
+x,y = a,b
+while y != 0:
+    x,y = b, a%b
+
+print(f"GCD of {a} and {b} is {x}"). """
+
+
+#program 65
+#write a python program to convert decimal value to binary
+
+
+"""num = int(input("Enter a number : "))
+
+temp = num
+binary = ""
+
+while temp > 0:
+  binary = str(temp%2) + binary
+  temp //= 2   #divide by 2
+
+print(f"Binary of {num} is {binary}")  """
+
+
+ 
+
+#program 66
+#write a python program to convert binary to decimal 
+
+"""bits = input("Enter a binary number : ")
+decimal = 0
+for bit in bits:
+    decimal = decimal * 2 + int(bit)  #shift left then add the new bit 
+print(f"Decimal value : {decimal}")  """
+
+
+#program 67
+#write a python program to find the digital root of a number 
+
+"""n = int(input("Enter a number : "))
+
+while n >= 10:
+    s = 0
+    temp = n
+    while temp > 0:
+        s += temp%10
+        temp //= 10
+    n = s
+    print("step:",n)
+print(f"Digital root : {n}")  """
+
+#program 68 
+#write a program to print the collatz sequence
+
+"""n = int(input("Enter a number :"))
+
+steps = 0
+while n != 1:
+  if n%2 == 0:
+    n//= 2
+  else:
+    3 * n + 1
+steps += 1
+
+print(n)
+print(f"Steps taken {steps}")"""
+
+
+#program 69
+#write a python program for a number guessing loop
+
+"""import random
+
+ran_num = random.randint(1, 10)
+attempts = 0
+
+num = int(input("Enter the number within ( 1 and 10) :"))
+
+attempts += 1
+
+if num > ran_num:
+  print("Guess lower")
+elif num < ran_num:
+  print("Guess Higher")
+elif num == ran_num:
+  print("Correctly guessed")
+else:
+  print("Invalid input, please input within a given range "). """
+
+
+
+#program 70
+#write a python program to print all coordinate pairs (row, col) 
+
+"""size = 3
+for row in range(size):
+    for col in range(size):
+        print(f"({row},{col})", end = "")   """
+
+
+#program 71
+#write a python program to print the right triangle of stars 
+
+"""rows = 5
+for i in range(1, rows + 1):
+    print("*" * i)
+"""
+
+#program 72
+#write a python program to print inverted right triangle
+
+"""rows = 5
+for i in range(rows, 0, -1):
+    print("*" * i) 
+    """
+
+
+#program 73
+#write a python program to print right aligned triangles
+
+"""rows = 5
+for i in range(1, rows +1):
+    print(" " * (rows - i) + "*" * i)"""
+
+#program 74
+#write a python program to print the number triangle
+
+"""rows = 5
+for i in range(1, rows+1):
+    for j in range(1, i + 1):
+        print(j, end = " ")
+    print()  """
+
+#program 75
+#write a python program to print the alphabet character 
+
+"""rows = 5
+for i in range(rows):
+    for j in range(i + 1):
+        print(chr(ord("A") + j), end = "")
+
+    print()"""
+
+
+#program 76
+#write a python program to print the floyd's triangle
+
+
+"""rows = 5
+num = 1
+
+for i in range(rows):
+    for j in range(i):
+        print(num , end = "")
+        num += 1
+    print()   """
+
+
+#program 77
+#write a python program to print a pyramid
+
+"""rows = 5
+
+for i in range(1 , rows + 1):
+
+ spaces = " " * (rows - i)
+ stars = "*" * (2 * i -1)
+
+ print(spaces + stars)  """
+
+
+#program 78
+#write a python program an inverse pyramid
+
+
+"""rows = 5
+
+for i in range(rows, 0, -1):
+    print(" " * (rows - i) + "*" * (2 * i -1))"""
+
+#program 79
+#write a python program to print a hollow star pattern
+
+
+"""size = 5
+
+for i in range(size):
+    for j in range(size):
+   #border rows and column get a star and the rest of the values a space
+
+     if i == 0 or i == size - 1 or j ==0 or j == size - 1:
+        print("*", end = "")
+
+    else:
+       print(" ", end = "")
+    print ()"""
+
+
+#program 80
+#write a python program to print a hollow right triangle
+
+
+"""rows = 5
+
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+
+        #first column diagonal, or last row gets a star
+        if j == 1 or j == i or i == rows:
+            print("*", end = "")
+        else:
+            print(" ", end = "")
+    print()"""
+            
+#program 81
+#write a python program to print the diamond of stars with 9 - stars pyramid followed by a row inverted pyramid
+
+"""rows = 5
+
+for i in range(1, rows + 1):
+    print(" " * (rows - i) +  "*" *(2 * i - 1))      #including the middle  row 
+
+for j in range(rows-1, 0, -1):
+    print(" " * (rows - j) + "*" * ( 2 * j - 1))"""
+
+
+#program 82
+#write a python program to print a number pyramid (palindromic rows)
+
+"""rows = 5
+
+for i in range(1, rows+1):
+    print( " " * (rows - i), end = "")
+    for j in range(1, i + 1):
+        print(j, end = "")
+    for j in range(i - 1, 0, -1):
+        print(j, end = "")
+    print() """
+
+
+#program 83
+#write a python program to print pascal's triangle
+
+"""n = 5
+for i in range(n):
+    val = 1
+    row = []
+    for j in range(i + 1):
+        row.append(str(val))
+        val = val * (i - j) // (j + 1).  #next bionomial coeffecient """
+
+#program 84
+#write a python program to print the butterfly pattern 
+
+"""n = 4
+for i in range(1, n+1):
+    print("*" * i + " " * (2 * (n- i)) + "*" * i)
+
+for j in range(n, 0, -1):
+    print("*" * j + " " * (2 * (n - j)) + "*" * j)
+"""
+#program 85
+#write a python program to print the zig-zag pattern 
+
+
+"""rows,cols = 3, 9
+for i in range(1, rows + 1):
+  for j in range(1,cols + 1):
+# stars sit on the diagonals of the wave or themiddle row anchors
+     if (i + j) % 4 == 0 or (i == 2 and j % 4 == 0):
+       print("*",end="")
+     else:
+       print(" ",end="")
+  print()"""
+
+
+#program 86
+#write a python program to reverse a string 
+
+"""string1 = input("Enter a string : ")
+
+ 
+reversed = string1[::-1]
+
+print(f"Reversed string : {reversed}")"""
+
+#program 87
+#write a python program to count the number of vowels in a string 
+
+"""input_str = input("Enter a string : ")
+
+vowels = "aeiou"
+count = 0
+
+
+for ch in input_str.lower():
+    if ch in vowels:
+        count += 1
+print(f"Vowels : {count}")"""
+
+
+
+#program 88
+#write a python program to count the consonant in a given string
+
+"""input_str = input("Enter a string :")
+
+count = 0
+vowels = "aeiou"
+
+for ch in input_str.lower():
+    if ch not in  vowels:
+        count += 1
+
+print(f"The number of consonants are {count}")    """
+
+
+#program 89
+#write a python program to check the palindrome 
+
+"""text = input("Enter the input :")
+
+reversed_text = text[::-1]
+
+if text == reversed_text:
+    print("Given string is a palindrome")
+else:
+    print("Given string is not palindrome")"""
+
+#program 90
+#write a python program to coun the words in a sequence
+
+"""sentence = input("Enter the input : ")
+
+words = sentence.split()
+
+print("The mumber of words in a given sentence is: " , len(words))  """
+
+#program 91
+#write a python program to to convert lower case into upper case and upper case into lower case
+
+"""sentence = input("Enter the input : ")
+
+
+result = ""
+
+for ch in sentence:
+    if ch.islower():
+        result += ch.upper()
+    elif ch.isupper():
+        result += ch.lower()
+    else:
+        result += ch   #keep sentences and spaces unchanged 
+
+
+print(f"The result is {result}")"""
+
+#program 92
+#write a python program which counts uppercase and lowercase letters in a word or a sentence
+
+
+
+"""input_str = input("Enter a string :")
+
+lower_case = 0
+upper_case = 0
+
+for ch in input_str:
+    if ch.islower():
+        lower_case += 1
+    elif ch.isupper():
+        upper_case += 1
+    else:
+        print("Dont enter digit")
+
+print("Upper case :", upper_case)
+print("lower case :", lower_case)"""
+
+
+#program 93
+#write a python program to remove all spaces without using replace
+
+"""input_str = input("Enter a string : ")
+
+
+result_str = ""
+
+
+for ch in input_str:
+    if ch != " ":
+        result_str += ch
+print(f"The resulting string without spaces are : ", result_str)"""
+
+#program 94
+#write a python program to check whether a string is present in another string 
+
+"""text = "programming"
+sub = "gram"
+found = -1    #not found yet
+
+
+for i in range(len(text) - len(sub) + 1):  
+  if text[i:i + len(sub)] == sub:
+        found = i
+        break  
+
+
+
+if found == -1:
+     print("Substring not found")
+else:
+    print("Found at index", found)         
+"""
+
+
+#program 95
+# Write a python program to replace a substring without replace                         
+
+
+"""text = "the cat sat on the cat mat"
+old = "cat"
+new = "dog"
+result = ""
+i = 0
+while i < len(text):
+  if text[i:i + len(old)] == old:
+     result += new
+     i += len(old) # jump past the matched word
+  else:
+    result += text[i]
+    i += 1
+print(result)
+"""
+
+#program 96
+#write a python program to capitalize each word without title()
+
+"""sentence = input("Enter a sentence : ")
+
+words = sentence.split()
+
+capitalized = []
+
+for word in words:
+  capitalized.append(word.upper[0] + word[1:])
+
+print(" ".join(capitalized))  """
+
+#program 97
+#write a program to count the frequency of every item 
+
+"""str = input("Enter a sentence :")
+
+freq = {}
+for ch in str:
+  freq[ch]  = freq.get(ch, 0)
+
+for ch, count in freq.items():
+  print(ch, " > "<count)  """
+
+#program 98
+#write a python program for removing duplicates
+
+"""input_str = input("Enter a string :")
+result = ""
+
+for ch in input_str:
+  if ch not in result:
+    result += ch
+
+print("The final string is ", result)"""
+
+#program 99
+#write a python program to check whether the two string are anagram or not 
+
+
+"""s1 = input("Enter a string : ").lower()
+s2 = input("Enter another string :").lower()
+
+if sorted(s1) == sorted(s2):
+    print("They are anagrams")
+else:
+    print("They are not anagrams")"""
+
+#program 100
+#write a python program to print the longest word in a sentence
+
+sentence = input("Enter the sentence :")
+
+
+longest = ""
+for word in sentence.split():
+    if len(word) > len(longest):
+        longest = word
+print("Longest word : ",longest)
 
 
