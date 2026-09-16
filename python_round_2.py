@@ -1467,13 +1467,404 @@ else:
 #program 100
 #write a python program to print the longest word in a sentence
 
-sentence = input("Enter the sentence :")
+"""sentence = input("Enter the sentence :")
 
 
 longest = ""
 for word in sentence.split():
     if len(word) > len(longest):
         longest = word
-print("Longest word : ",longest)
+print("Longest word : ",longest)  """
+
+#program 101
+#write a python program to print the acronym generator
+#acronym = first letter of each word to be capital 
+
+"""input_str = input("Enter the string : ")
+acronym = ""
+
+for words in input_str.split():     #indexing the first letter of each character
+ acronym += words[0].upper()
+
+print("The acronym are ", acronym)"""
 
 
+
+#program 102
+#write a python program to print the first non-repeating character. #find the first character in a string that appears exactly once 
+
+
+"""text = input("Enter a string : ")
+freq = {}
+
+for ch in text:
+    freq[ch] = freq.get(ch,0) + 1
+    answer = None
+
+   
+for ch in text:
+    if freq[ch] == 1:
+        answer = ch
+        break
+
+
+if answer is None:
+    print("No non repeating character")
+else:
+    print("Th first non repeating character is", answer)
+"""
+
+#program 103
+#write a python program to print pangram check 
+#it contains each and every alphabet from A to Z at least once 
+
+"""sentence = input("Enter the input sentence :")
+letters = set()
+
+for words in sentence:
+    if words.isalpha():
+        letters.add(words)
+if len(letters) == 26:
+     print("The sentence is panagram")
+else:
+    print("The sentence is not panagram")    """
+
+
+#program 104
+#write a python progrtam to remove the punctuation 
+
+"""text = input("Enter the input string :")
+
+result = ""
+for ch in text:
+    if ch.isalnum() or ch == " ":
+        result += ch
+  
+print("The cleaned text is", result)   """
+
+
+#program 105
+#write a python program to print caesar cipher 
+#encrypt a message by shifting every letter forward by a given number of places in the alphabet
+
+
+
+"""text = input("Enter a message: ")
+shift = int(input("Enter shift: "))
+result = ""
+
+for ch in text:
+ if ch.isupper():
+# ord() gives the character code; % 26 wraps zback to a
+    result += chr((ord(ch) - ord("") + shift) % 26 +ord(""))
+ elif ch.islower():
+    result += chr((ord(ch) - ord("a") + shift) % 26 +ord("a"))
+ else:
+    result += ch
+print("Encrypted:", result)
+"""
+
+
+#program 106
+#write a python program to check string rotation 
+
+"""s1 = "abcde"
+s2 = "cdeab"
+
+
+if len(s1) == len(s2) or s2 in s1 + s1:
+    print("The string is rotated")
+else:
+    print("The string is not rotated")"""
+
+
+#program 107
+#write a python program to find the longest common prefix
+
+
+"""words = ["flower", "flow", "flight"]
+
+prefix = words[0]
+
+while not words.startswith(prefix):
+    prefix = prefix[:-1]
+    if prefix == "":
+        break
+
+if prefix:
+    print("The longest common prefix is", prefix)
+else:
+    print("No longer prefix exists"). """
+
+
+#LISTS
+#program 108
+#write a python program to find the maximum element without using max() 
+
+
+"""numbers =[23,45,67,83,22]
+
+largest = numbers[0]
+
+
+for n in numbers:
+    if n > largest:
+        largest = n
+
+print("The largets number in list of numbers is", largest)     """
+
+
+#program 109
+#write a python program to find the minimum element in the list
+
+"""numbers =[23,45,67,83,22]
+
+smallest = numbers[0]
+
+
+for n in numbers:
+    if n < smallest:
+        smallest = n
+
+print("The largets number in list of numbers is", smallest)    """
+
+
+#program 110
+#write a python program to compute the sum and average of a list of numbers without using sum and average
+
+"""numbers = [10,20,30,40]
+
+sum = 0
+
+for n in numbers:
+    sum += n
+
+average = sum/len(numbers)
+
+print(f"The average of numbers are ", average)      """
+
+#pprogram 111
+#write a python program to print the linear search 
+
+"""numbers = [3,5,6,9,4]
+target = 9
+index = -1
+
+for i in range(len(numbers)):
+    if numbers[i] == target:
+        index = i
+        break
+
+print(f"The index for", target,"is",index)  """
+
+
+#program 112
+#write a python program to count the occurences of a value without using count operator ()
+
+
+"""numbers = [4,5,2,2,2,3,4,2]
+
+target = 2
+count = 0
+
+for n in numbers:
+    if n == target:
+        count += 1
+
+print(f"{target} appears {count} times.")    """
+
+#program 113
+#write a python program to print the list of squares 
+
+"""list = [1,5,6,8,3,4]
+
+
+squares = [n ** 2 for n in list]
+
+print(f"Thje square of given list is", squares)
+"""
+
+#program 114
+#write a python program to reverse a list in a place 
+
+"""numbers = [1,2,3,4,5]
+
+left = 0
+right = len(numbers) - 1
+while left < right:
+    numbers[left], numbers[right] = numbers[right],numbers[left]
+    left += 1
+    right -= 1
+print("Reversed:", numbers)        """
+#Two pointer swapping for both -ends 
+
+
+#program 115
+#write a python program to check if a list is sorted 
+
+"""
+def is_sorted(num):
+
+    for i in range(len(num) - 1):
+      if num[i] > num[i + 1]:
+         return False
+    return True
+
+print(is_sorted([1,3,5,7]))
+print(is_sorted([4,7,9,6,7]))
+
+"""
+#program 116
+#write a python program to find the second largest element 
+
+
+"""numbers = [10, 40, 30, 40, 20]
+largest = None
+second = None
+for n in numbers:
+  if largest is None or n > largest:
+   second = largest # old largest becomes second
+   largest = n
+  elif n != largest and (second is None or n > second):
+   second = n
+
+print("Second largest:", second)       """
+
+
+#program 117
+#write a python program to remove duplicates
+
+"""numbers = [1,2,2,2,3,3,3,5,5]
+unique = []
+
+for n in numbers:
+  if n not in unique:
+    unique.append(n)
+
+print(f"The updated list is {unique}")  """
+
+
+#program 118
+#write a python program to split the list into odd list and even list 
+
+
+"""list = [1,2,3,4,5,6,7,8,9]
+
+even_list = []
+odd_list = []
+
+for n in list:
+    if n%2 == 0:
+        even_list.append(n)
+    else:
+        odd_list.append(n)
+
+print(f"Odd list is {odd_list}")
+print(f"Even list is {even_list}")    """
+
+
+#program 119
+#write a python program to print the cumulative sum of number in the list
+
+"""list = [1,2,3,6]
+
+
+running = 0
+cumulative = []
+
+for n in list:
+    running += n
+    cumulative.append(n)
+print("Cumulative sum :", cumulative)"""
+
+
+#program 120
+#write a python program to remove all occurences in a list
+
+
+"""list_1 = [1,2,2,3,4,4,4,5,5]
+value = 4
+
+removal = [n for n in list_1 if n != value]
+
+print(f"The final list after removal is ", removal)     """
+
+
+#program 121
+#write a python program to print the common elements of two lists
+
+"""list1 = [1,2,3,4]
+list2 = [3,4,5,6]
+
+common = []
+
+
+for x in list1:
+    if x in list2 and x not in common:
+        common.append(x)
+
+print(f"list with common  elements is {common}")    """
+
+#program 122
+ #write a python program to add two lists 
+
+"""list1 = [1,2,3,4,5]
+list2 = [6,7,8,9,10]
+
+
+union_list = []
+
+
+for x in list1 + list2:
+    if x not in union_list:
+        union_list.append(x)
+
+print(f"The updated list is {union_list}")    """
+
+
+#program 123
+#write a python program to find the duplicate items
+
+
+"""numbers = [1, 2, 3, 2, 4, 1, 5]
+seen = set()
+duplicates = []
+for n in numbers:
+  if n in seen and n not in duplicates:
+    duplicates.append(n) # second time we meet n
+  seen.add(n)
+
+print("Duplicates:",duplicates)   """
+
+
+#program 124
+#write a python program to find the missing number
+
+
+"""numbers = [1,2,4,5,6]
+n = 6
+
+
+total = n * (n + 1) // 2
+
+actual = sum(numbers)
+
+missing = total - actual
+
+print(f"Missing value is {missing}")     """
+
+
+#program 125
+#write a python program to move zeros to the end 
+
+
+"""numbers = [0,4,0,2,0,1,0,0]
+
+non_zero = [n for n in numbers if n != 0]
+
+no_of_zeros = len(numbers) - len(non_zero)
+
+result = non_zero + [0] * no_of_zeros
+
+
+print(f"zeros at the end are", result)     """
