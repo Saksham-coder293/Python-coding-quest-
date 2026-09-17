@@ -686,7 +686,7 @@ print(f"Total tax = Rs. {tax:.2f}")  """
 
 
 #program 46
-#write a python program that print the number from 1 to 20
+#write a python program that print the number from 1 to 10
 
 
 """for i in range(1,11):
@@ -1868,3 +1868,76 @@ result = non_zero + [0] * no_of_zeros
 
 
 print(f"zeros at the end are", result)     """
+
+
+#program 126
+#write a python program to rotate a loist by k 
+
+"""numbers = [1,2,3,4,5]
+k = 2
+k = k % len(numbers)  # handles k larger than the list length 
+
+rotated = numbers[-k:] + numbers[:-k]
+print("Rotated : ", rotated)"""
+
+
+#program 127
+#write a python program to chunk a list into size - n pieces
+
+"""numbers = [1,2,3,4,5,6,7]
+
+chunks = []
+size = 3
+
+for i in range(0, len(numbers), size):
+    chunks.append(numbers[i:i + size])
+print("Chunks", chunks)       """
+
+
+#program 128
+#write a python program to insert a value into a sorted list
+
+"""numbers = [1,3,5,9]
+
+value = 7
+
+position = len(numbers)
+
+for i in range(len(numbers)):
+    if numbers[i] > value:
+        position = i
+        break
+numbers.insert(value, position)
+
+print("After insert : ", numbers)"""
+
+
+#program 129
+#write a python program to find the pairs with a given sum
+
+"""numbers = [1,2,3,4,5,6]
+
+target = 7
+
+for i in range(len(numbers)):
+    for j in range(i + 1, len(numbers)):
+        if numbers[i] + numbers[j] == target:
+          print(f"{numbers[i]} + {numbers[j]} = {target}")"""
+
+
+#program 130
+#write a python program to merge two sorted lists
+
+
+
+
+
+
+
+
+#program 131
+#write a python program to flatten a nested list
+
+
+
+
